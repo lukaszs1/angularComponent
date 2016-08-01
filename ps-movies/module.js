@@ -1,6 +1,11 @@
 (function() {
     "use strict";
 
-    angular.module("mov", []);
+    var x = angular.module("mov", ["ngComponentRouter"]);
+    x.value("$routerRootComponent","movieApp");
+
+    x.component("appAbout", {
+    	template:"About page..."
+    });
 
 }());
