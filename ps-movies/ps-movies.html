@@ -11,14 +11,17 @@
 			<td>{{movie.length}}</td>
 			<td><rating value="movie.rating"></rating></td>
 			<td>
-				<div class="btn-group">
-					<button class="btn btn-default" ng-click="model.up(movie)">
-						<span class="glyphicon glyphicon-plus"></span>
-					</button>
-					<button class="btn btn-default" ng-click="model.down(movie)">
-						<span class="glyphicon glyphicon-minus"></span>
-					</button>
-				</div>
+				
+				<button class="btn btn-default" ng-click="model.up(movie)">
+					<span class="glyphicon glyphicon-plus"></span>
+				</button>
+				<button class="btn btn-default" ng-click="down(movie)">
+					<span class="glyphicon glyphicon-minus"></span>
+				</button>
+				<a ng-link="['Det',{id:movie.id}]" class="btn btn-default">
+					<span class="glyphicon glyphicon-zoom-in"></span>
+				 </a>
+				
 			</td>
 		</tr>
 	</table>

@@ -2,7 +2,7 @@
 	 "use strict"
 	 var module = angular.module("mov");	
 
-	 function controller ($http) {
+	 function controller ($http, $scope) {
 	 		 var model = this;
 	 		 //var movies = [];
 	 		 model.$onInit = function(){
@@ -18,7 +18,7 @@
 	 		 	 }
 	 		 	 
 	 		 }
-	 		 model.down = function (movie) {
+	 		 $scope.down = function (movie) {
 	 		 	 if (movie.rating > 1) {
 	 		 	 	movie.rating--;
 	 		 	 };
@@ -29,6 +29,6 @@
 	 module.component("movl", {
 	 	templateUrl:"ps-movies/ps-movies.html",
 	 	controllerAs: "model",
-	 	controller: ['$http',controller]
+	 	controller: ['$http','$scope',controller]
 	 });
 })();
